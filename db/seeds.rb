@@ -8,14 +8,17 @@
 
 require 'faker'
 
+#fabrique des villes
 10.times do 
     City.create(name: Faker::Address.city)
 end
 
+#fabrique des chiens
 20.times do 
     Dog.create(name: Faker::Name.name, city_id: rand(1..10))
 end
 
+#fabrique des promeneurs.
 20.times do 
     DogSitter.create(name: Faker::Name.name, city_id: rand(1..10))
-end
+end 
